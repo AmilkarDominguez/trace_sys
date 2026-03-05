@@ -57,3 +57,41 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Project Structure
+
+```bash
+src/app/
+│
+├── core/                        # Singleton services, guards, interceptors (lo que se carga una vez)
+│   ├── auth/
+│   │   ├── guards/              # auth.guard.ts, public.guard.ts
+│   │   ├── interceptors/        # jwt.interceptor.ts, error.interceptor.ts
+│   │   └── services/            # auth.service.ts
+│   └── models/                  # Interfaces globales (user.model.ts)
+│
+├── shared/                      # Componentes, pipes y directives reutilizables
+│   ├── components/              # Botones, inputs, tablas genéricas
+│   ├── directives/
+│   └── pipes/
+│
+├── layouts/                     # Estructuras visuales (esqueletos)
+│   ├── admin-layout/            # Sidebar + Navbar + Content
+│   └── auth-layout/             # Centrado para Login/Register
+│
+├── features/                    # Módulos lógicos del negocio
+│   ├── auth/
+│   │   ├── login/               # login.component.ts (Standalone)
+│   │   └── register/
+│   │
+│   ├── dashboard/               # Página principal del panel
+│   │   ├── components/          # Componentes específicos del dashboard (stats-card, chart)
+│   │   └── dashboard.component.ts
+│   │
+│   └── users/                   # Ejemplo de otra funcionalidad
+│       ├── user-list/
+│       └── user-detail/
+│
+└── app.routes.ts                # Definición de rutas (usando lazy loading)
+```

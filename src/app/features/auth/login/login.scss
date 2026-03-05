@@ -1,0 +1,44 @@
+.form-login{
+  background-color: var(--mat-sys-surface);
+  border: solid 1px black;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  gap: 1.25rem;
+}
+
+.logo{
+  margin-bottom: 1rem;
+}
+
+.logo-banner{
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  span{
+    color: #147676;
+  }
+}
+
+.text{
+  text-align: left;
+  width: 100%;
+  margin-left: 0.4rem;
+}
+
+.input-container {
+  width: 25rem;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+
+.login-button{
+  width: 25rem;
+  padding: 1.5rem;
+}

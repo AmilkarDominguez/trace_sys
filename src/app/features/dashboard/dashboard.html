@@ -1,0 +1,13 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="over">
+    <button matIconButton  aria-label="Close" (click)="drawer.toggle()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button matMiniFab aria-label="Menu" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-drawer-content>
+</mat-drawer-container>
