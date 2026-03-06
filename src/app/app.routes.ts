@@ -17,7 +17,11 @@ export const routes: Routes = [
     component: AdminLayout,
     //canActivate: [authGuard]
     children: [
-      { path: '', component: Dashboard  }
+      { path: '', component: Dashboard },
+      {
+        path: 'catalogos/ganaderos',
+        loadComponent: () => import('./features/dashboard/rancher/rancher-dashboard').then(m => m.RancherDashboard),
+      },
     ]
   },
   { path: '**', redirectTo: 'auth/login' }
