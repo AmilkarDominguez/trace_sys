@@ -14,5 +14,5 @@ import { NavMenu } from '../../features/dashboard/components/nav-menu/nav-menu';
   styleUrl: './admin-layout.scss',
 })
 export class AdminLayout {
-  sidenavOpen = signal(true);
+  sidenavOpen = signal(false);
 }

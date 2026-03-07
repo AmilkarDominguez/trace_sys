@@ -1,12 +1,4 @@
-import {
-  Component,
-  input,
-  output,
-  effect,
-  viewChild,
-  AfterViewInit,
-} from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { AfterViewInit, Component, effect, input, output, viewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -19,7 +11,6 @@ import { Rancher } from '../../../../../core/models/rancher.model';
 @Component({
   selector: 'app-rancher-table',
   imports: [
-    DatePipe,
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
