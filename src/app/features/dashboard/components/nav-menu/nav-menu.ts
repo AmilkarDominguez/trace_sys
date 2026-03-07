@@ -61,7 +61,7 @@ export class NavMenu {
       title: 'Producción (Faena)',
       icon: 'precision_manufacturing',
       items: [
-        { label: 'Faenas', icon: 'engineering', route: '/dashboard/produccion/faenas' },
+        { label: 'Registros de Faena', icon: 'engineering', route: '/dashboard/produccion/faenas' },
         { label: 'Canales', icon: 'view_week', route: '/dashboard/produccion/canales' },
         { label: 'Etiquetas', icon: 'qr_code_2', route: '/dashboard/produccion/etiquetas' },
         { label: 'Pesajes', icon: 'scale', route: '/dashboard/produccion/pesajes' },

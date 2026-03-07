@@ -1,4 +1,8 @@
 Crea un nuevo CRUD para la entidad `$ARGUMENTS`
+
+utiliza un razonamiento: adaptive thinking
+
+toma como ejemplo el CRUD de rancher
 Con la siguientes consideraciones
 1. Todos los componentes, class de estilo y variables deben estar en ingles, solo los labels y registros en ES.
 2. Ruta base para todo el CRUD en `src/app/features/dashboard/$ARGUMENTS/`.
@@ -18,5 +22,7 @@ Con la siguientes consideraciones
 6. Un archivo `$ARGUMENTS.mock.ts` con data estatica representativa
 
 Realiza los ajutes necesarios si es pertinente en otros componentes compatidos en `src/app/shared/components/`, directivas en  `src/app/shared/directives/` y pipes en `src/app/shared/pipes/`
+
+Comprueba que todo esta funcionando correntamente con las versiones de angular 21
 
 Sigue las convenciones del CLAUDE.md: signals, sin HTTP, Angular Material.

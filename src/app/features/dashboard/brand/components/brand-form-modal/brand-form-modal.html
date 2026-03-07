@@ -1,0 +1,59 @@
+<h2 mat-dialog-title class="modal-title">
+  <mat-icon class="modal-title-icon">{{ isEditMode ? 'edit' : 'label' }}</mat-icon>
+  {{ isEditMode ? 'Editar Marca' : 'Nueva Marca' }}
+</h2>
+
+<mat-dialog-content class="modal-content">
+  <form [formGroup]="form" class="form-grid">
+
+    <mat-form-field appearance="outline" class="field-full">
+      <mat-label>Nombre de la Marca</mat-label>
+      <input matInput formControlName="name" placeholder="Ej. Cruz Alta" />
+      <mat-icon matSuffix>label</mat-icon>
+      @if (getFieldError('name')) {
+        <mat-error>{{ getFieldError('name') }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field-half">
+      <mat-label>Código SENASAG</mat-label>
+      <input matInput formControlName="code" placeholder="Ej. SENASAG-0001" style="text-transform: uppercase" />
+      <mat-icon matSuffix>qr_code</mat-icon>
+      @if (getFieldError('code')) {
+        <mat-error>{{ getFieldError('code') }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field-half">
+      <mat-label>Ganadero Propietario</mat-label>
+      <input matInput formControlName="rancher" placeholder="Ej. Estancia El Prado S.R.L." />
+      <mat-icon matSuffix>person</mat-icon>
+      @if (getFieldError('rancher')) {
+        <mat-error>{{ getFieldError('rancher') }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field-full">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="description" rows="3"
+        placeholder="Ej. Marca de fuego en forma de cruz alta, anca derecha..."></textarea>
+      <mat-icon matSuffix>description</mat-icon>
+      @if (getFieldError('description')) {
+        <mat-error>{{ getFieldError('description') }}</mat-error>
+      }
+    </mat-form-field>
+
+    <div class="field-full">
+      <mat-checkbox formControlName="isActive" color="primary">Marca activa</mat-checkbox>
+    </div>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="modal-actions" align="end">
+  <button mat-stroked-button (click)="onCancel()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="onSave()">
+    <mat-icon>save</mat-icon>
+    {{ isEditMode ? 'Guardar cambios' : 'Registrar' }}
+  </button>
+</mat-dialog-actions>

@@ -6,6 +6,11 @@ mat-sidenav {
   width: 260px;
   border-right: 1px solid var(--mat-sys-outline-variant);
   border-radius: 0;
+  overflow-y: hidden;
+}
+
+:host ::ng-deep .mat-drawer-inner-container {
+  overflow: hidden;
 }
 
 .sidenav-header {
