@@ -29,6 +29,7 @@ export class LabelTable implements AfterViewInit {
   edit = output<Label>();
   view = output<Label>();
   delete = output<Label>();
+  print = output<Label>();
 
   readonly displayedColumns = [
     'labelCode',

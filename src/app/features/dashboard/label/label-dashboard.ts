@@ -11,6 +11,7 @@ import { LabelTable } from './components/label-table/label-table';
 import { LabelFormModal, LabelFormData } from './components/label-form-modal/label-form-modal';
 import { LabelDetailModal } from './components/label-detail-modal/label-detail-modal';
 import { LabelDeleteConfirmModal } from './components/label-delete-confirm-modal/label-delete-confirm-modal';
+import { LabelPrintModal } from './components/label-print-modal/label-print-modal';
 
 @Component({
   selector: 'app-label-dashboard',
@@ -108,6 +109,14 @@ export class LabelDashboard {
       if (!confirmed) return;
       this.labels.update(list => list.filter(l => l.id !== label.id));
       this.snackBar.open('Etiqueta eliminada', 'Cerrar', { duration: 3000 });
+    });
+  }
+
+  onPrint(label: Label): void {
+    this.dialog.open(LabelPrintModal, {
+      width: '46rem',
+      maxWidth: '95vw',
+      data: label,
     });
   }
 }
